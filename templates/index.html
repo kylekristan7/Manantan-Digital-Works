@@ -25,7 +25,7 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href={{ url_for('portfolio') }}">Portfolio</a></li>
                         <li><a href="{{ url_for('chat') }}">Conversation</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li id="nav-login-item"><a href="{{ url_for('login') }}">Login</a></li>
@@ -58,13 +58,13 @@
                 <div class="hero-visual">
                     <div class="center-node"><i class="fa-solid fa-network-wired"></i></div>
 
-                    <div class="user-node node-1"><img src="{{ url_for('static', filename='images/Leader.jpeg') }}" alt="Kyle" class="node-img"></div>
-                    <div class="user-node node-2"><img src="{{ url_for('static', filename='images/Member1.jpeg') }}" alt="James" class="node-img"></div>
-                    <div class="user-node node-3"><img src="{{ url_for('static', filename='images/Member2.jpeg') }}" alt="Mark" class="node-img"></div>
-                    <div class="user-node node-4"><img src="{{ url_for('static', filename='images/Member3.jpeg') }}" alt="Jessie" class="node-img"></div>
-                    <div class="user-node node-5"><img src="{{ url_for('static', filename='images/Member4.jpeg') }}" alt="John" class="node-img"></div>
-                    <div class="user-node node-7"><img src="{{ url_for('static', filename='images/Member5.jpeg') }}" alt="Justin" class="node-img"></div>
-                    <div class="user-node node-9"><img src="{{ url_for('static', filename='images/Member6.jpeg') }}" alt="kirby" class="node-img"></div>
+                    <div class="user-node node-0"><img src="{{ url_for('static', filename='images/Leader.jpeg') }}" alt="Kyle" class="node-img"></div>
+                    <div class="user-node node-1"><img src="{{ url_for('static', filename='images/Member1.jpeg') }}" alt="James" class="node-img"></div>
+                    <div class="user-node node-2"><img src="{{ url_for('static', filename='images/Member2.jpeg') }}" alt="Mark" class="node-img"></div>
+                    <div class="user-node node-3"><img src="{{ url_for('static', filename='images/Member3.jpeg') }}" alt="Jessie" class="node-img"></div>
+                    <div class="user-node node-4"><img src="{{ url_for('static', filename='images/Member4.jpeg') }}" alt="John" class="node-img"></div>
+                    <div class="user-node node-6"><img src="{{ url_for('static', filename='images/Member6.jpeg') }}" alt="Justin" class="node-img"></div>
+                    <div class="user-node node-5"><img src="{{ url_for('static', filename='images/Member5.jpeg') }}" alt="kirby" class="node-img"></div>
                 </div>
             </div>
 
@@ -173,7 +173,7 @@
                 </div>
 
                 <div class="member" onclick="showMember('justin')">
-                    <img src="{{ url_for('static', filename='images/Member5.jpeg') }}">
+                    <img src="{{ url_for('static', filename='images/Member6.jpeg') }}">
                     <h3>Justin P. Imbag</h3>
                     <span>App - Developer</span>
                 </div>
