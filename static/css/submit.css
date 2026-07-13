@@ -1,0 +1,333 @@
+/*=====================================
+    ROOT
+=====================================*/
+:root{
+    --primary:#0d6efd;
+    --primary-dark:#084298;
+    --success:#198754;
+    --danger:#dc3545;
+    --warning:#ffc107;
+
+    --bg:#f4f8fc;
+    --white:#ffffff;
+    --text:#1f2937;
+    --gray:#6b7280;
+
+    --shadow:0 12px 35px rgba(0,0,0,.12);
+    --radius:18px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#eef5ff,#dbeafe);
+
+    min-height:100vh;
+
+    color:var(--text);
+
+}
+
+/*=====================================
+SECTION
+=====================================*/
+
+.flow-section{
+
+    width:min(900px,95%);
+
+    margin:auto;
+
+    padding:60px 0;
+
+}
+
+.flow-section h1{
+
+    text-align:center;
+
+    font-size:40px;
+
+    color:var(--primary);
+
+    margin-bottom:50px;
+
+}
+
+/*=====================================
+CARD
+=====================================*/
+
+.flow-card{
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:var(--radius);
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    border-left:6px solid var(--primary);
+
+}
+
+.flow-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+.card-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.flow-card ul{
+
+    padding-left:22px;
+
+}
+
+.flow-card li{
+
+    margin:10px 0;
+
+    color:var(--gray);
+
+    font-size:17px;
+
+}
+
+.flow-card p{
+
+    color:var(--gray);
+
+    margin-top:10px;
+
+}
+
+/*=====================================
+ARROWS
+=====================================*/
+
+.arrow{
+
+    text-align:center;
+
+    margin:18px 0;
+
+    font-size:38px;
+
+    color:var(--primary);
+
+    animation:bounce 1.3s infinite;
+
+}
+
+.arrow-horizontal{
+
+    width:60px;
+
+    height:4px;
+
+    background:var(--primary);
+
+    margin:auto;
+
+    position:relative;
+
+}
+
+.arrow-horizontal::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-2px;
+
+    top:-5px;
+
+    border-left:12px solid var(--primary);
+
+    border-top:7px solid transparent;
+
+    border-bottom:7px solid transparent;
+
+}
+
+/*=====================================
+SPECIAL COLORS
+=====================================*/
+
+.member{
+
+    border-left-color:#2563eb;
+
+}
+
+.pending{
+
+    border-left-color:orange;
+
+}
+
+.admin{
+
+    border-left-color:#6610f2;
+
+}
+
+.approve{
+
+    border-left-color:var(--success);
+
+}
+
+.reject{
+
+    border-left-color:var(--danger);
+
+}
+
+.portfolio{
+
+    border-left-color:#20c997;
+
+}
+
+/*=====================================
+APPROVE REJECT
+=====================================*/
+
+.decision-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+    margin:35px 0;
+
+}
+
+.decision{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+.approve .card-title{
+
+    color:var(--success);
+
+}
+
+.reject .card-title{
+
+    color:var(--danger);
+
+}
+
+/*=====================================
+ANIMATION
+=====================================*/
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(8px);
+
+    }
+
+}
+
+/*=====================================
+REVEAL
+=====================================*/
+
+.flow-card{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+}
+
+.flow-card.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.8s ease;
+
+}
+
+/*=====================================
+RESPONSIVE
+=====================================*/
+
+@media(max-width:768px){
+
+.flow-section h1{
+
+    font-size:30px;
+
+}
+
+.decision-container{
+
+    flex-direction:column;
+
+}
+
+.card-title{
+
+    font-size:19px;
+
+}
+
+.flow-card{
+
+    padding:20px;
+
+}
+
+}

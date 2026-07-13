@@ -1,0 +1,9 @@
+openai
+colorama
+pwinput
+python-dotenv
+rich
+cryptography
+requests
+tiktoken
+pyyaml

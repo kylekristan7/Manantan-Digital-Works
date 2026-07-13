@@ -1,0 +1,6 @@
+{
+  "api_key": "1234",
+  "base_url": "https://openrouter.ai/api/v1",
+  "model": "1",
+  "language": "English"
+}

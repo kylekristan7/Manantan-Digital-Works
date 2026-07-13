@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Submission Flow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio.css') }}">
+</head>
+
+<body>
+
+<section class="flow-section">
+
+    <h1>Project Submission Workflow</h1>
+
+    <!-- MEMBER -->
+    <div class="flow-card member">
+
+        <div class="card-title">
+            <i class="fa-solid fa-user"></i>
+            MEMBER
+        </div>
+
+    </div>
+
+    <div class="arrow">
+        <i class="fa-solid fa-arrow-down-long"></i>
+    </div>
+
+    <!-- LOGIN -->
+
+    <div class="flow-card">
+
+        <div class="card-title">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            Login / Member Dashboard
+        </div>
+
+    </div>
+
+    <div class="arrow">
+        <i class="fa-solid fa-arrow-down-long"></i>
+    </div>
+
+    <!-- SUBMIT -->
+
+    <div class="flow-card">
+
+        <div class="card-title">
+            <i class="fa-solid fa-upload"></i>
+            Submit Project
+        </div>
+
+        <ul>
+
+            <li>Project Title</li>
+
+            <li>Description</li>
+
+            <li>Category</li>
+
+            <li>Technologies Used</li>
+
+            <li>GitHub Link</li>
+
+            <li>Live Demo Link</li>
+
+            <li>Images / Screenshots</li>
+
+            <li>ZIP File (Optional)</li>
+
+        </ul>
+
+    </div>
+
+    <div class="arrow">
+        <i class="fa-solid fa-arrow-down-long"></i>
+    </div>
+
+    <!-- PENDING -->
+
+    <div class="flow-card pending">
+
+        <div class="card-title">
+            <i class="fa-solid fa-clock"></i>
+            Status : Pending Review
+        </div>
+
+    </div>
+
+    <div class="arrow">
+        <i class="fa-solid fa-arrow-down-long"></i>
+    </div>
+
+    <!-- ADMIN -->
+
+    <div class="flow-card admin">
+
+        <div class="card-title">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+            ADMIN REVIEW
+
+        </div>
+
+        <ul>
+
+            <li>Check Project</li>
+
+            <li>Check Screenshots</li>
+
+            <li>Check Links</li>
+
+            <li>Check Quality</li>
+
+        </ul>
+
+    </div>
+
+    <!-- APPROVE / REJECT -->
+
+    <div class="decision-container">
+
+        <div class="decision">
+
+            <div class="arrow-horizontal"></div>
+
+            <div class="flow-card approve">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    APPROVED
+
+                </div>
+
+                <p>Published to Portfolio</p>
+
+            </div>
+
+        </div>
+
+        <div class="decision">
+
+            <div class="arrow-horizontal"></div>
+
+            <div class="flow-card reject">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-circle-xmark"></i>
+
+                    REJECTED
+
+                </div>
+
+                <p>Return with Comments</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="arrow">
+        <i class="fa-solid fa-arrow-down-long"></i>
+    </div>
+
+    <!-- PUBLIC -->
+
+    <div class="flow-card portfolio">
+
+        <div class="card-title">
+
+            <i class="fa-solid fa-globe"></i>
+
+            PUBLIC PORTFOLIO
+
+        </div>
+
+        <ul>
+
+            <li>View Project</li>
+
+            <li>View Screenshots</li>
+
+            <li>Open Live Demo</li>
+
+            <li>Open GitHub</li>
+
+            <li>Read Description</li>
+
+            <li>See Developer</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/portfolio.js') }}"></script>
+</body>
+
+</html>

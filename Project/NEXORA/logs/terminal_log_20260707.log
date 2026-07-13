@@ -1,0 +1,12 @@
+[2026-07-07T18:27:12.339880] User Input Raw: exit
+[2026-07-07T18:27:12.339913] Engine Clean Data: 
+[Stream Execution Exception]: Error code: 401 - {'error': {'message': 'Incorrect API key provided: kyle1234. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[2026-07-07T18:27:30.267996] User Input Raw: 2
+[2026-07-07T18:27:30.268019] Engine Clean Data: 
+[Stream Execution Exception]: Error code: 401 - {'error': {'message': 'Incorrect API key provided: kyle1234. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[2026-07-07T18:27:37.639786] User Input Raw: kyle1234
+[2026-07-07T18:27:37.639806] Engine Clean Data: 
+[Stream Execution Exception]: Error code: 401 - {'error': {'message': 'Incorrect API key provided: kyle1234. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[2026-07-07T18:27:45.291098] User Input Raw: param
+[2026-07-07T18:27:45.291124] Engine Clean Data: 
+[Stream Execution Exception]: Error code: 401 - {'error': {'message': 'Incorrect API key provided: kyle1234. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}

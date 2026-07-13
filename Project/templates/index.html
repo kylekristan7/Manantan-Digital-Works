@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manantan Digital Networks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <span class="logo-bracket">&lt;</span>MDN<span class="logo-bracket">/&gt;</span>
+      </div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loaderBar"></div>
+      </div>
+      <p class="loader-text" id="loaderText">Initializing...</p>
+    </div>
+  </div>
+
+  <div id="custom-cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <canvas id="particle-canvas"></canvas>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>MDN<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span id="themeIcon">🌙</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Welcome to</p>
+      <h1 class="hero-name">
+        <span class="glitch" data-text="Manantan">Manantan</span>
+        <span class="name-last">Digital Networks</span>
+      </h1>
+      <p class="hero-tagline">
+        <span class="typewriter" id="typewriter"></span>
+        <span class="cursor-blink">|</span>
+      </p>
+      <div class="hero-cta">
+        <a href="#team" class="btn btn-primary">Meet the Team</a>
+        <a href="#services" class="btn btn-ghost">Our Services</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="section-header reveal">
+      <span class="section-tag">Who We Are</span>
+      <h2 class="section-title">About MDN</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-card reveal">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <h3>Our Mission</h3>
+        <p class="about-bio">Delivering innovative digital solutions — from web development to hardware and networking — with precision, passion, and professionalism.</p>
+      </div>
+      <div class="about-card reveal delay-1">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>Our Team</h3>
+        <p class="about-bio">5 dedicated specialists covering Web Development, IT Support, Hardware, Networking, and Front-End Design — a full-service digital team.</p>
+      </div>
+      <div class="about-card reveal delay-2">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h3>Our Edge</h3>
+        <p class="about-bio">We combine technical expertise with real-world deployment experience — building, maintaining, and scaling digital infrastructure end-to-end.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section" id="team">
+    <div class="section-header reveal">
+      <span class="section-tag">The People Behind MDN</span>
+      <h2 class="section-title">Our Team</h2>
+    </div>
+    <div class="team-grid">
+
+      <div class="member-card boss reveal">
+        <div class="member-avatar">
+          <div class="avatar-ring"></div>
+          <div class="avatar-initials">KM</div>
+          <div class="boss-badge">👑 Boss</div>
+        </div>
+        <div class="member-info">
+          <h3 class="member-name">Kyle Kristan M. Manantan</h3>
+          <span class="member-role">Web Development</span>
+          <p class="member-desc">Leads the team and drives the full web development stack — from architecture to deployment.</p>
+          <div class="member-tags">
+            <span>HTML/CSS</span><span>JavaScript</span><span>Backend</span><span>Deployment</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="member-card reveal delay-1">
+        <div class="member-avatar">
+          <div class="avatar-ring"></div>
+          <div class="avatar-initials">JP</div>
+        </div>
+        <div class="member-info">
+          <h3 class="member-name">James Pascual</h3>
+          <span class="member-role">IT Support</span>
+          <p class="member-desc">Handles technical troubleshooting, system maintenance, and ensures the team's IT infrastructure runs smoothly.</p>
+          <div class="member-tags">
+            <span>Troubleshooting</span><span>Systems</span><span>Support</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="member-card reveal delay-2">
+        <div class="member-avatar">
+          <div class="avatar-ring"></div>
+          <div class="avatar-initials">MD</div>
+        </div>
+        <div class="member-info">
+          <h3 class="member-name">Mark EJ Delos Angeles</h3>
+          <span class="member-role">Hardware & Networking</span>
+          <p class="member-desc">Manages hardware setups and network configurations, keeping the team's digital backbone strong and reliable.</p>
+          <div class="member-tags">
+            <span>Hardware</span><span>Networking</span><span>Infrastructure</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="member-card reveal delay-1">
+        <div class="member-avatar">
+          <div class="avatar-ring"></div>
+          <div class="avatar-initials">JN</div>
+        </div>
+        <div class="member-info">
+          <h3 class="member-name">John Paul Nunez </h3>
+          <span class="member-role">Front-End Developer</span>
+          <p class="member-desc">Crafts beautiful, responsive user interfaces — turning designs into polished, interactive web experiences.</p>
+          <div class="member-tags">
+            <span>UI/UX</span><span>HTML/CSS</span><span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+        
+ <div class="member-card reveal delay-1">
+        <div class="member-avatar">
+          <div class="avatar-ring"></div>
+          <div class="avatar-initials">JN</div>
+        </div>
+
+    <div class="member-info">
+        <h3 class="member-name">John Kirby Agular</h3>
+        <span class="member-role">
+            Currently Learning Back-End and Ethical Hacking
+        </span>
+
+        <p class="member-desc">
+            Passionate about learning secure backend development and cybersecurity.
+        </p>
+
+        <div class="member-tags">
+            <span>Python</span>
+            <span>Back-End</span>
+            <span>Ethical Hacking</span>
+        </div>
+    </div>
+</div>
+
+    </div>
+  </section>
+
+  <section class="services-section" id="services">
+    <div class="section-header reveal">
+      <span class="section-tag">What We Offer</span>
+      <h2 class="section-title">Our Services</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <h3>Web Development</h3>
+        <p>Full-stack websites and web applications — designed, built, and deployed for performance.</p>
+      </div>
+      <div class="service-card reveal delay-1">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <h3>Front-End Design</h3>
+        <p>Aesthetic, responsive UI/UX with smooth animations and clean code.</p>
+      </div>
+      <div class="service-card reveal delay-2">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3>IT Support</h3>
+        <p>Technical assistance, troubleshooting, and system maintenance for individuals and organizations.</p>
+      </div>
+      <div class="service-card reveal delay-1">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="2" width="20" height="8" rx="2"/>
+            <rect x="2" y="14" width="20" height="8" rx="2"/>
+            <line x1="6" y1="6" x2="6.01" y2="6"/>
+            <line x1="6" y1="18" x2="6.01" y2="18"/>
+          </svg>
+        </div>
+        <h3>Hardware & Networking</h3>
+        <p>Hardware assembly, diagnostics, and network setup for homes and businesses.</p>
+      </div>
+      
+    <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="8" y="8" width="10" height="20" rx="2"></rect>
+            <circle cx="13" cy="24" r="1"></circle>
+        </svg>
+      </div>
+    <h3>App Development</h3>
+    <p>
+        We create modern Android and cross-platform mobile applications with responsive design,
+        secure architecture, and excellent user experience.
+    </p>
+</div>
+
+</div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="section-header reveal">
+      <span class="section-tag">Let's Work Together</span>
+      <h2 class="section-title">Contact Us</h2>
+    </div>
+    <div class="contact-inner reveal">
+      <p class="contact-sub">Have a project in mind? We'd love to hear from you. Send us a message and we'll get back to you.</p>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" placeholder="Your name" />
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="femail">Email</label>
+            <input type="email" id="femail" placeholder="your@email.com" />
+            <span class="form-error" id="emailError"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="fsubject">Subject</label>
+          <input type="text" id="fsubject" placeholder="What's this about?" />
+          <span class="form-error" id="subjectError"></span>
+        </div>
+        <div class="form-group">
+          <label for="fmessage">Message</label>
+          <textarea id="fmessage" rows="5" placeholder="Write your message here..."></textarea>
+          <span class="form-error" id="messageError"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+          <span id="submitText">Send Message</span>
+          <span id="submitSpinner" class="spinner hidden"></span>
+        </button>
+        <div id="formSuccess" class="form-success hidden">
+          ✅ Message sent! We'll get back to you soon.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">
+      <span class="logo-bracket">&lt;</span>MDN<span class="logo-bracket">/&gt;</span>
+    </div>
+    <p class="footer-name">Manantan Digital Networks</p>
+    <p class="footer-copy">© 2025 Manantan Digital Networks — All rights reserved.</p>
+  </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/nav-auth.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/features.js') }}"></script>
+</body>
+</html>
